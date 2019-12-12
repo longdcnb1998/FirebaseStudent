@@ -64,34 +64,34 @@ public class ParentActivity extends AppCompatActivity {
 //        bundle1.putString("Private",jsonNoticePri);
 //        Fragment_NotificationPrivate aPrivate = new Fragment_NotificationPrivate();
 //        aPrivate.setArguments(bundle1);
-        notices = new ArrayList<>();
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference NotiRef = firebaseDatabase.getReference().child("school").child("classes").child(positionClass).child("students").child(position).child("notice");
-        NotiRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Log.d("Hello",dataSnapshot.toString());
-                notices = new ArrayList<>();
-                for (DataSnapshot snapshot:dataSnapshot.getChildren()) {
-                    Notice notice = snapshot.getValue(Notice.class);
-                    notices.add(notice);
-                }
-                adapter = new NotificationAdapter(getApplicationContext(),notices);
-                binding.recyclerViewNotification.setLayoutManager(new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL,false));
-                binding.recyclerViewNotification.setAdapter(adapter);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-        binding.imageViewBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+//        notices = new ArrayList<>();
+//        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+//        DatabaseReference NotiRef = firebaseDatabase.getReference().child("school").child("classes").child(positionClass).child("students").child(position).child("notice");
+//        NotiRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                Log.d("Hello",dataSnapshot.toString());
+//                notices = new ArrayList<>();
+//                for (DataSnapshot snapshot:dataSnapshot.getChildren()) {
+//                    Notice notice = snapshot.getValue(Notice.class);
+//                    notices.add(notice);
+//                }
+//                adapter = new NotificationAdapter(getApplicationContext(),notices);
+//                binding.recyclerViewNotification.setLayoutManager(new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL,false));
+//                binding.recyclerViewNotification.setAdapter(adapter);
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
+//
+//        binding.imageViewBack.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
     }
 }
