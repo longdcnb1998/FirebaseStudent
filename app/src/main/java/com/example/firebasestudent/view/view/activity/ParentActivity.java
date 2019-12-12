@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.example.firebasestudent.R;
 import com.example.firebasestudent.databinding.ActivityParentBinding;
@@ -86,11 +87,11 @@ public class ParentActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-//
-
+        binding.imageViewBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
