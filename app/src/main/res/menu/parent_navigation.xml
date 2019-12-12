@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/navigation_notification"
+    <item android:id="@+id/navigation_notification_parent"
         android:title="Thông Báo"
         android:icon="@drawable/bell"/>
     <item android:id="@+id/navigation_HocPhi"
         android:title="Học Phí"
         android:icon="@drawable/bell"/>
     <item
+        android:icon="@drawable/mess"
         android:title="Nhắn Tin"
         android:id="@+id/navigation_mess">
     </item>
