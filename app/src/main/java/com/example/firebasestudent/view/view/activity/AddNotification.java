@@ -13,7 +13,7 @@ import com.android.volley.AuthFailureError;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.example.firebasestudent.MySingleton;
+import com.example.firebasestudent.Service.MySingleton;
 import com.example.firebasestudent.R;
 import com.example.firebasestudent.databinding.ActivityAddNotificationBinding;
 import com.example.firebasestudent.model.Notice;
